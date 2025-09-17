@@ -1,6 +1,5 @@
 .first-layer {
     display: flex;
-    flex-direction: row;
     align-items: center;
     border: 1px solid red;
     justify-content: space-between ;
@@ -9,6 +8,10 @@
     top: 0;
     left: 0;
     right: 0;
+}
+.links {
+    display: flex;
+    align-items: center;
 }
 .second-layer {
     margin-top: 195px;
@@ -25,10 +28,25 @@
 }
 .click {
     font-size: 25px;
-    margin-right: 80px;
+    margin-right: 30px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    position: relative;
+}
+.click::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+     background: white;
+     bottom: -5px;
+     transition: 0.5s
+}
+.click:hover::after {
+    width: 100%;
 }
 .head {
 font-size: 6pc;
